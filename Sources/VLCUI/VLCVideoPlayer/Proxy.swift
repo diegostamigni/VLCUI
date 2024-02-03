@@ -152,5 +152,10 @@ public extension VLCVideoPlayer {
         public func playNewMedia(_ newConfiguration: Configuration) {
             videoPlayerView?.setupVLCMediaPlayer(with: newConfiguration)
         }
+
+        /// Sets the media renderer item
+        public func setRendererItem(_ item: VLCRendererItem?) -> Bool {
+            mediaPlayer?.setRendererItem(item) ?? false
+        }
     }
 }
