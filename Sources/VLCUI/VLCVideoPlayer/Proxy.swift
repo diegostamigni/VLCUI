@@ -153,9 +153,11 @@ public extension VLCVideoPlayer {
             videoPlayerView?.setupVLCMediaPlayer(with: newConfiguration)
         }
 
+        #if !os(tvOS)
         /// Sets the media renderer item
         public func setRendererItem(_ item: VLCRendererItem?) -> Bool {
             mediaPlayer?.setRendererItem(item) ?? false
         }
+        #endif
     }
 }
